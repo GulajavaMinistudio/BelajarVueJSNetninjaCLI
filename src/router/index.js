@@ -10,6 +10,9 @@ const HelloWorldVue = () => import(/* webpackChunkName: "hello-world" */ '@/comp
 // latihan dasar vue instances
 const VueInstancesComponent = () => import(/* webpackChunkName: "vue-instance-tut1" */ '@/components/latihandasar/part1-vue-instances/VueInstancesComponent');
 
+// latihan dasar tentang penulisan data dan methods
+const vueDataMethods = () => import(/* webpackChunkName: "vue-data-methods" */ '@/components/latihandasar/part2-data-methods/VueDataMethods.vue');
+
 export default new Router({
   routes: [
     {
@@ -26,6 +29,11 @@ export default new Router({
       path: '/vue-instances-component',
       name: 'VueInstancesComponent',
       component: VueInstancesComponent,
+    },
+    {
+      path: '/vue-data-method',
+      name: 'VueDataMethods',
+      component: vueDataMethods,
     },
   ],
 });

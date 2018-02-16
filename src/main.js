@@ -4,6 +4,9 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
+// require('./libs/progressive-image.min.css');
+// require('./libs/progressive-image.min.js');
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
