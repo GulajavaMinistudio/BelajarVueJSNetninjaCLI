@@ -16,7 +16,12 @@ const MenuLatihanDasar = () => import(/* webpackChunkName: "menu-latihan-dasar" 
 // latihan dasar vue instances
 const VueInstancesComponent = () => import(/* webpackChunkName: "vue-instance-tut1" */ '@/components/latihandasar/part1-vue-instances/VueInstancesComponent');
 // latihan dasar tentang penulisan data dan methods
-const vueDataMethods = () => import(/* webpackChunkName: "vue-data-methods" */ '@/components/latihandasar/part2-data-methods/VueDataMethods.vue');
+const vueDataMethods = () => import(/* webpackChunkName: "vue-data-methods" */ '@/components/latihandasar/part2-data-methods/VueDataMethods');
+// latihan dasar tentang vue data binding
+const VueDataBinding = () => import(/* webpackChunkName: "vue-data-binding" */ '@/components/latihandasar/part3-databinding/VueDataBindings');
+// latihan dasar tentang event html handling di html dan js vue nya
+const VueEventHandling = () => import(/* webpackChunkName: "vue-event-handlers" */'@/components/latihandasar/part4-events/VueEventHandlers');
+
 
 export default new Router({
   routes: [
@@ -48,6 +53,16 @@ export default new Router({
           path: 'vue-data-method',
           name: 'VueDataMethods',
           component: vueDataMethods,
+        },
+        {
+          path: 'vue-databinding',
+          name: 'VueDataBinding',
+          component: VueDataBinding,
+        },
+        {
+          path: 'vue-event-handling',
+          name: 'VueEventHandlers',
+          component: VueEventHandling,
         },
         {
           path: '**',

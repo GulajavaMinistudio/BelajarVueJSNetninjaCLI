@@ -1,24 +1,4 @@
-<template>
-  <div>
-    <h1>
-      Menu Latihan Dasar
-    </h1>
-    <ul>
-      <li>
-        <a>
-          <router-link to="/latihan-dasar/vue-instances">Vue Instances</router-link
-        ></a>
-      </li>
-      <li>
-        <a>
-          <router-link to="/latihan-dasar/vue-data-method">
-          Vue Data dan Methods
-          </router-link>
-        </a>
-      </li>
-    </ul>
-  </div>
-</template>
+<template src="./menu-latihan-dasar.html"></template>
 <script>
 export default {
   name: 'MenuLatihanDasar',

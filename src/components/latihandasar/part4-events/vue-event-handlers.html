@@ -1,0 +1,24 @@
+<div>
+  <h1>Vue Events Handler</h1>
+  <div>
+    <p>Umur kucing saya adalah {{umurKucing}}</p>
+  </div>
+  <div>
+    <button v-on:click="tambahUmur()">Tambah Umur Kucing</button>
+  </div>
+  <div>
+    <button v-on:click="kurangiUmur()">Kurangi Umur Kucing</button>
+  </div>
+  <div>
+    <button v-on:dblclick="tambahUmurDouble()">Tambah Umur Double Klik</button>
+  </div>
+  <div>
+    <button v-on:dblclick="kurangiUmurDouble()">Kurangi Umur Double Klik</button>
+  </div>
+  <div>
+    <button v-on:dblclick="tambahUmurVal(15)">Tambah Umur Nilai Double Klik</button>
+  </div>
+  <div>
+    <button v-on:dblclick="kurangiUmurVal(15)">Kurangi Umur Nilai Double Klik</button>
+  </div>
+</div>
