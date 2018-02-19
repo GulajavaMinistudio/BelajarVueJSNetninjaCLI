@@ -24,7 +24,7 @@ export default {
       this.umurKucing += valIncrement;
     },
     kurangiUmurVal(valDecrement) {
-      this.umurKucing -= valDecrement;
+      this.umurKucing += valDecrement;
     },
   },
   computed: {
