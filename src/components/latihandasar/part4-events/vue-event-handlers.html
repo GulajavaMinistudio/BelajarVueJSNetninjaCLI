@@ -16,9 +16,18 @@
     <button v-on:dblclick="kurangiUmurDouble()">Kurangi Umur Double Klik</button>
   </div>
   <div>
-    <button v-on:dblclick="tambahUmurVal(15)">Tambah Umur Nilai Double Klik</button>
+    <button @dblclick="tambahUmurVal(15)">Tambah Umur Nilai Double Klik</button>
   </div>
   <div>
     <button v-on:dblclick="kurangiUmurVal(15)">Kurangi Umur Nilai Double Klik</button>
+  </div>
+  <div>
+    <h1>Canvas Mouse Reader</h1>
+    <div id="canvas" v-on:mousemove="updateKoordXY">
+      <div>X {{koordX}} dan Y {{koordY}}</div>
+    </div>
+    <div id="canvas" v-on:mousemove="updateKoordXYEventVal($event)">
+      <div>X {{nilaiX}} dan Y {{nilaiY}}</div>
+    </div>
   </div>
 </div>

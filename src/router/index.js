@@ -21,6 +21,7 @@ const vueDataMethods = () => import(/* webpackChunkName: "vue-data-methods" */ '
 const VueDataBinding = () => import(/* webpackChunkName: "vue-data-binding" */ '@/components/latihandasar/part3-databinding/VueDataBindings');
 // latihan dasar tentang event html handling di html dan js vue nya
 const VueEventHandling = () => import(/* webpackChunkName: "vue-event-handlers" */'@/components/latihandasar/part4-events/VueEventHandlers');
+const VueEventModifiers = () => import(/* webpackChunkName: "vue-event-modifiers" */'@/components/latihandasar/part5-eventmodifier/EventModifiers');
 
 
 export default new Router({
@@ -63,6 +64,11 @@ export default new Router({
           path: 'vue-event-handling',
           name: 'VueEventHandlers',
           component: VueEventHandling,
+        },
+        {
+          path: 'vue-event-modifiers',
+          name: 'VueEventModifiers',
+          component: VueEventModifiers,
         },
         {
           path: '**',

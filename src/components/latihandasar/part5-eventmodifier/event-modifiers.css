@@ -1,0 +1,27 @@
+#kanvas {
+  width: 600px;
+  padding: 200px 20px;
+  text-align: center;
+  border: 2px solid salmon;
+}
+
+#root {
+  width: 600px;
+  padding: 200px 20px;
+  text-align: center;
+  border: 2px solid salmon;
+}
+
+#parent {
+  width: 400px;
+  padding: 100px 20px;
+  text-align: center;
+  border: 2px solid salmon;
+}
+
+#child {
+  width: 200px;
+  padding: 100px 20px;
+  text-align: center;
+  border: 2px solid salmon;
+}
