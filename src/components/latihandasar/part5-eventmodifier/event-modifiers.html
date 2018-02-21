@@ -2,9 +2,10 @@
   <!-- https://stackoverflow.com/questions/42763940/vue-js-what-is-the-self-modifier -->
   <h1>Event Handler Modifiers</h1>
   <div>
-    <h3>Umur Kucing Saya adalah </h3>
+    <h3>Umur Kucing Saya adalah {{umurKucing}}</h3>
     <div>
-      <button v-on:click="tambahUmurKucing(1)">Tambah 1 Tahun</button>
+      <!-- .once menjalankan event klik dom ini hanya sekali saja -->
+      <button v-on:click.once="tambahUmurKucing(1)">Tambah 1 Tahun</button>
     </div>
     <div>
       <button v-on:click="kurangiUmurKucing(1)">Kurangi 1 Tahun</button>
@@ -13,11 +14,16 @@
       <button v-on:dblclick="tambahUmurKucing(10)">Tambah 10 tahun</button>
     </div>
     <div>
-      <button v-on:dblclick="kurangiUmurKucing(10)">Kurangi 10 tahun</button>
+      <button v-on:dblclick.once="kurangiUmurKucing(10)">Kurangi 10 tahun</button>
     </div>
+
+    <div>
+      <a v-on:click.prevent="clickHrefs()" href="https://www.google.com">Klik Prevent Google Com</a>
+    </div>
+
     <div>
       <h1>Canvas Mouse Reader</h1>
-      <div id="kanvas" v-on:mousemove="updateNilaiXY">
+      <div id="kanvas" v-on:mousemove.capture="updateNilaiXY">
         <div>X {{nilaiX}} dan Y {{nilaiY}}</div>
       </div>
       <div id="kanvas" v-on:mousemove="updateNilaiXY($event)">
@@ -28,7 +34,25 @@
     <div>
       <h3>Sampel Event Modifier yang Lain</h3>
       <h3>Berisi nested click dari masing masing DOM yang dapat dihentikan dengan event modifiers berikut</h3>
+      <p>Capture adalah menangkap event yang terjadi di dalam child DOM</p>
+      <div id="root" v-on:click.capture="logEventModifiers('root di klik')">
+        <div id="parent" v-on:click="logEventModifiers('parent di klik')">
+          <div id="child" v-on:click="logEventModifiers('child di klik')">
+            <h5>Child Komponent</h5>
+          </div>
+        </div>
+      </div>
+      <p>Stop adalah menghentikan event yang terjadi di dalam child DOM. Tidak berlanjut event click nya setelah element dom dengan stop ./p>
       <div id="root" v-on:click="logEventModifiers('root di klik')">
+        <!-- root dom tidak menerima event click dari child -->
+        <div id="parent" v-on:click.stop="logEventModifiers('parent di klik')">
+          <div id="child" v-on:click="logEventModifiers('child di klik')">
+            <h5>Child Komponent</h5>
+          </div>
+        </div>
+      </div>
+      <p>Self adalah menjalankan event jika hanya element dom tersebut di klik</p>
+      <div id="root" v-on:click.self="logEventModifiers('root di klik')">
         <div id="parent" v-on:click="logEventModifiers('parent di klik')">
           <div id="child" v-on:click="logEventModifiers('child di klik')">
             <h5>Child Komponent</h5>
