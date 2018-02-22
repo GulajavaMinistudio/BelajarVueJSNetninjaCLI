@@ -1,3 +1,18 @@
 <div>
+  <h1>Keyboard Events</h1>
 
+  <label for="namakucing">Nama Kucing</label>
+  <input type="text" name="namakucing" v-model="objInputNamaUmur.nama" v-on:keyup.ctrl.space="getInputNama()" placeholder="ctrl dan spasi">
+
+  <label for="umurkucing">Umur Kucing</label>
+  <input type="text" name="umurkucing" v-model="objInputNamaUmur.umur"
+  v-on:keyup.enter="getInputUmur()" placeholder="tekan enter saja">
+
+  <input type="text" name="umurkucing" v-model="objInputNamaUmur.umur"
+  v-on:keyup.alt.enter="getInputUmur()" placeholder="alt dan enter ">
+
+  <input type="text" name="umurkucing" v-model="objInputNamaUmur.umur"
+  v-on:keyup.page-down="getInputUmur()" placeholder="page down klik">
+
+  <p>Key event modifier seperti ini sebaiknya dikombinasikan dengan tombol enter</p>
 </div>

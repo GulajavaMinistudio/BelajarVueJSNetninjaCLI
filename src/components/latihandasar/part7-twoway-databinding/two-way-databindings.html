@@ -1,0 +1,17 @@
+<div>
+  <h1>Two Way Data Binding</h1>
+  <div>
+    <label for="inputnama">Nama</label>
+    <input type="text" name="inputnama" v-model="nama" v-on:keyup.enter="logNamaInput()">
+    <div>
+      <span>{{nama}}</span>
+    </div>
+  </div>
+  <div>
+    <label for="">Umur</label>
+    <input type="text" name="inputumur" v-model="umur" v-on:keyup.enter="logUmurInput()">
+    <div>
+      <span>{{umur}}</span>
+    </div>
+  </div>
+</div>
