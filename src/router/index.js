@@ -21,8 +21,10 @@ const vueDataMethods = () => import(/* webpackChunkName: "vue-data-methods" */ '
 const VueDataBinding = () => import(/* webpackChunkName: "vue-data-binding" */ '@/components/latihandasar/part3-databinding/VueDataBindings');
 // latihan dasar tentang event html handling di html dan js vue nya
 const VueEventHandling = () => import(/* webpackChunkName: "vue-event-handlers" */'@/components/latihandasar/part4-events/VueEventHandlers');
+// latihan tentang event modifiers di vue
 const VueEventModifiers = () => import(/* webpackChunkName: "vue-event-modifiers" */'@/components/latihandasar/part5-eventmodifier/EventModifiers');
 
+const KeyboardEvents = () => import(/* webpackChunkName: "vue-keyboard-events" */ '@/components/latihandasar/part6-keyboard-event/KeyboardEvents');
 
 export default new Router({
   routes: [
@@ -69,6 +71,11 @@ export default new Router({
           path: 'vue-event-modifiers',
           name: 'VueEventModifiers',
           component: VueEventModifiers,
+        },
+        {
+          path: 'vue-keyboard-events',
+          name: 'KeyboardEvents',
+          component: KeyboardEvents,
         },
         {
           path: '**',
