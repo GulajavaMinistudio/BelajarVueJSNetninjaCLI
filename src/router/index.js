@@ -3,7 +3,7 @@ import Router from 'vue-router';
 // import HelloWorld from '@/components/HelloWorld';
 // import file router langsung tanpa menggunakan async loading seperti halnya memuat komponen
 import RouteLatihanMenengah from '@/components/latihan-menengah/router-modules-latihandasar/latihan-menengah-routes';
-import RouteLatihanDasar from '@/components/latihandasar/router-module-latihandasar/latihan-dasar-routes';
+import RouteLatihanDasar from '@/components/latihan-dasar/router-module-latihandasar/latihan-dasar-routes';
 
 Vue.use(Router);
 

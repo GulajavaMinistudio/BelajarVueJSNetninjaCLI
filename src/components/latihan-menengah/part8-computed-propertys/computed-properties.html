@@ -1,3 +1,27 @@
 <div>
-
+  <h1>Computed Properties</h1>
+  <!-- <h3>Dengan Methods Taruh di HTML</h3>
+  <button v-on:click="tambahNilaiA()">Tambah Nilai A</button>
+  <button v-on:click="tambahNilaiB()">Tambah Nilai B</button>
+  <p>Nilai A - {{nilaiA}}</p>
+  <p>Nilai B - {{nilaiB}}</p>
+  <p>Umur + Nilai A = {{tambahUmurNilaiA()}}</p>
+  <p>Umur + Nilai B = {{tambahUmurNilaiB()}}</p>
+  <p>Log Nilai Umur {{logNilaiUmur()}}</p>
+  <p>Jika menggunakan methods atau fungsi langsung ditaruh di html, maka kedua fungsi yang ditaruh tersebut akan berjalan, jika salah satu nilai yang dipakai diubah oleh fungsi yang bersangkutan</p>
+  <br> -->
+  <h3>Dengan Computed Property</h3>
+  <button v-on:click="tambahNilaiAComputed()">Tambah Nilai A</button>
+  <button v-on:click="tambahNilaiBComputed()">Tambah Nilai B</button>
+  <button v-on:click="tambahNilaiUmur()">Tambah Nilai Umur</button>
+  <p>Nilai A - {{nilaiAc}}</p>
+  <p>Nilai B - {{nilaiBc}}</p>
+  <p>Umur + Nilai A = {{computedAddUmurNilaiA}}</p>
+  <p>Umur + Nilai B = {{computedAddUmurNilaiB}}</p>
+  <p>Umur yang sekarang adalah {{computedUmur}}</p>
+  <h3>Dengan Input</h3>
+  <input type="text" v-model="firstNama">
+  <input type="text" v-model="lastNama" v-on:keyup.enter="lengkapiGelar()">
+  <input type="text" v-model="namaLengkap">
+  <p>Nama Lengkapnya adalah {{namaLengkap}}</p>
 </div>
