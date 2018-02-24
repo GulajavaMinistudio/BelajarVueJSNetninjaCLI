@@ -10,6 +10,20 @@ export default {
       umurNilaic: 20,
       firstNama: '',
       lastNama: '',
+      namaKumpulan: [
+        {
+          firsts: 'Pertama 1',
+          lasts: 'Akhir 1',
+        },
+        {
+          firsts: 'Pertama 2',
+          lasts: 'Akhir 2',
+        },
+        {
+          firsts: 'Pertama 3',
+          lasts: 'Akhir 3',
+        },
+      ],
     };
   },
   methods: {

@@ -24,4 +24,13 @@
   <input type="text" v-model="lastNama" v-on:keyup.enter="lengkapiGelar()">
   <input type="text" v-model="namaLengkap">
   <p>Nama Lengkapnya adalah {{namaLengkap}}</p>
+  <!-- computed property tidak bisa dipakai untuk v-for , solusinya gunakan filter -->
+  <!-- <div>
+    <h1>Nama Lengkap V-For</h1>
+    <div>
+      <p v-for="item in namaKumpulan">
+        {{namaLengkapFor(item)}}
+      </p>
+    </div>
+  </div> -->
 </div>
