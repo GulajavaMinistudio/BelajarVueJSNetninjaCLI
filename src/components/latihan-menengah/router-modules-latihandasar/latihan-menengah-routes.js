@@ -5,6 +5,10 @@ const MenuLatihanMenengah = () => import(/* webpackChunkName: "menu-latihan-mene
 // menu latihan menggunakan computed properties
 const ComputedProperti = () => import(/* webpackChunkName: "latihan-computed-property" */'@/components/latihan-menengah/part8-computed-propertys/ComputedProperties');
 
+// latihan menggunakan class style data binding
+// https://vuejs.org/v2/guide/class-and-style.html
+const DynamicCSS = () => import(/* webpackChunkName: "dynamic-css" */'@/components/latihan-menengah/part9-dinamics-css/DynamicCSS');
+
 export default [
   {
     path: '/latihan-menengah',
@@ -19,6 +23,11 @@ export default [
         path: 'computeds-property',
         name: 'ComputedProperties',
         component: ComputedProperti,
+      },
+      {
+        path: 'css-dinamis',
+        name: 'DynamicCSS',
+        component: DynamicCSS,
       },
       {
         path: '*',
