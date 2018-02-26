@@ -1,3 +1,26 @@
 <div>
+  <h1>Dynamic CSS Style Binding</h1>
+  <div>
+    <h3>Contoh 1</h3>
+    <div v-bind:class="{red: true, biru: true}">
+      Data Style CSS Binding 1
+    </div>
+    <div v-bind:class="[classObjek1, classObjek2]">
+      Data Style Binding Bentuk Array dan Computed Property
+    </div>
 
+    <h3>Contoh 2</h3>
+    <div v-on:click="setTersediaToggle()" v-bind:class="{availableClass: isTersedia}">
+      <p>Kelas dengan Span dan CSS Binding Class</p>
+      <span>Hello Bind Class</span>
+    </div>
+
+    <h3>Contoh 3</h3>
+    <p>Contoh Bind Class dengan Computed Property</p>
+    <div v-bind:class="computedClass">
+      <span>Hello Bind Class Computed</span>
+    </div>
+    <button v-on:click="setTersediaToggle()">Setel Tersedia</button>
+    <button v-on:click="setTerdekatToggle()">Setel Terdekat</button>
+  </div>
 </div>
