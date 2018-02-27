@@ -9,6 +9,9 @@ const ComputedProperti = () => import(/* webpackChunkName: "latihan-computed-pro
 // https://vuejs.org/v2/guide/class-and-style.html
 const DynamicCSS = () => import(/* webpackChunkName: "dynamic-css" */'@/components/latihan-menengah/part9-dinamics-css/DynamicCSS');
 
+// latihan memakai rendering dengan kondisi tertentu
+const ConditionRendering = () => import(/* webpackChunkName: "conditional-renderings" */'@/components/latihan-menengah/part10-conditional-rendering/ConditionalRenders.vue');
+
 export default [
   {
     path: '/latihan-menengah',
@@ -28,6 +31,11 @@ export default [
         path: 'css-dinamis',
         name: 'DynamicCSS',
         component: DynamicCSS,
+      },
+      {
+        path: 'conditional-rendering',
+        name: 'ConditionalRendering',
+        component: ConditionRendering,
       },
       {
         path: '*',
