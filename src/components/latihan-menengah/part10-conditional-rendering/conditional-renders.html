@@ -6,13 +6,32 @@
   <div>
     <button v-on:click="aktifkanSukses()">Aktifkan Sukses</button>
   </div>
-  <p>Layout Error Muncul</p>
-  <p>Layout Sukses Muncul</p>
+  <!-- tampilkan layout error jika nilai isErrorSatuTrue -->
+  <p v-if="isErrorSatu">Layout Error Muncul</p>
+  <p v-else>Layout Sukses Muncul</p>
+
+  <!-- jika isErrorDua true, tampilkan layoutnya. Jika isErrorDua false, maka tampilkan layout isSuksesDua jika bernilai true -->
+  <br>
+  <div>
+    <button v-on:click="aktifkanError2()">Aktifkan Error</button>
+  </div>
+  <div>
+    <button v-on:click="aktifkanSukses2()">Aktifkan Sukses</button>
+  </div>
+  <p v-if="isErrorDua">Layout Error Muncul nilai Error {{isErrorDua}}</p>
+  <p v-else-if="isSuksesDua">Layout Sukses Muncul V-ELSE IF nilai Sukses Dua {{isSuksesDua}}</p>
 
   <br>
   <h1>Conditional Rendering Layout 2</h1>
+  <p>Dengan menggunakan V Show</p>
   <div>
-
+    <div>
+      <button v-on:click="setStatusSukses()">Show Sukses</button>
+      <button v-on:click="setStatusError()">Show Error</button>
+    </div>
+    <p v-show="isShowSukses" v-bind:class="successStatus">Sukses V Show Ditampilkan</p>
+    <p v-show="isShowError" v-bind:class="errorStatus">Error V Show Ditampilkan</p>
+    <p>V Show menampilkan dan menyembunyikan element dengan menggunakan style css display none atau tidak</p>
   </div>
   <div>
 
