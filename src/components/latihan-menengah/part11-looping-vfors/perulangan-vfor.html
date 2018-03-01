@@ -1,0 +1,63 @@
+<div>
+  <h1>Perulangan dengan Menggunakan V-For</h1>
+  <br>
+  <p>V For yang dipakai untuk menampilkan data berbentuk JSON Array dengan Anggota berupa data Primitif
+  </p>
+  <div>
+    <div v-for="itemmakanan in karaktermakanans">
+      {{ itemmakanan }}
+    </div>
+  </div>
+  <br>
+  <ul>
+    <li v-for="(itemmakanan, index) in karaktermakanans">
+      {{index}} - {{itemmakanan}}
+    </li>
+  </ul>
+  <br>
+  <br>
+  <p>V For yang dipakai untuk menampilkan data berbentuk JSON Array dengan anggota berupa Object</p>
+  <div>
+    <div v-for="kucing in tipekucings">
+      {{kucing}}
+    </div>
+    <br>
+    <div v-for="(kucing, index) in tipekucings">
+      indeks - {{index}} - value nya - {{kucing.name}} - umur {{kucing.umur}}
+    </div>
+  </div>
+  <br>
+  <br>
+  <p>V For yang dipakai untuk menampilkan data berbentuk JSON Object</p>
+  <div>
+    <div v-for="(value, key, index) in objekucing">
+      {{value}} - key {{key}} - indeks {{index}}
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <p>Perulangan kembali untuk array dengan JSON Object di dalamnya</p>
+  <div>
+    <ul>
+      <li v-for="(ninjakucing, index) in ninjakucings">
+        <div>{{index}} - Tipe {{ninjakucing.tipe}} , Kelas {{ninjakucing.kelas}}</div>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <li v-for="(ninjakucing, index) in ninjakucings">
+        <div v-for="(value, key, index) in ninjakucing">
+          <p>{{index}} . {{key}} - {{value}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <p>Dengan Template</p>
+  <template v-for="(ninjakucing, index) in ninjakucings">
+    <div v-for="(val, key, index) in ninjakucing">
+      {{key}} - {{val}}
+    </div>
+  </template>
+</div>

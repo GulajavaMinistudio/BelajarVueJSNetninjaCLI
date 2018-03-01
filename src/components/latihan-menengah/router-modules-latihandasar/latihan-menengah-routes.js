@@ -10,7 +10,10 @@ const ComputedProperti = () => import(/* webpackChunkName: "latihan-computed-pro
 const DynamicCSS = () => import(/* webpackChunkName: "dynamic-css" */'@/components/latihan-menengah/part9-dinamics-css/DynamicCSS');
 
 // latihan memakai rendering dengan kondisi tertentu
-const ConditionRendering = () => import(/* webpackChunkName: "conditional-renderings" */'@/components/latihan-menengah/part10-conditional-rendering/ConditionalRenders.vue');
+const ConditionRendering = () => import(/* webpackChunkName: "conditional-renderings" */'@/components/latihan-menengah/part10-conditional-rendering/ConditionalRenders');
+
+// latihan menggunakan perulangan dengan v-for directive pada vue
+const PerulanganVFor = () => import(/* webpackChunkName: "perulangan-vfors" */'@/components/latihan-menengah/part11-looping-vfors/PerulanganVfor');
 
 export default [
   {
@@ -36,6 +39,11 @@ export default [
         path: 'conditional-rendering',
         name: 'ConditionalRendering',
         component: ConditionRendering,
+      },
+      {
+        path: 'perulangan-vfor',
+        name: 'PerulanganVfor',
+        component: PerulanganVFor,
       },
       {
         path: '*',
