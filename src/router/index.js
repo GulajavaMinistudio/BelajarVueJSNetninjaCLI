@@ -13,6 +13,9 @@ const HelloWorldVue = () => import(/* webpackChunkName: "hello-world" */ '@/comp
 // home component dulu dimuat
 const HomeComponent = () => import(/* webpackChunkName: "home-component" */ '@/components/homecomponent/HomeComponent');
 
+// latihan tentang membuat punch bag game
+const PunchBagGame = () => import(/* webpackChunkName: "pukul-guling-tinju" */ '@/components/tugas-latihan/punchbags/PunchBagGame');
+
 // variabel router dipisah
 const baseRouters = [
   {
@@ -24,6 +27,11 @@ const baseRouters = [
     path: '/hello-world-vue',
     name: 'HelloWorldVue',
     component: HelloWorldVue,
+  },
+  {
+    path: '/punch-bag-game',
+    name: 'PunchBagGame',
+    component: PunchBagGame,
   },
   {
     path: '*',

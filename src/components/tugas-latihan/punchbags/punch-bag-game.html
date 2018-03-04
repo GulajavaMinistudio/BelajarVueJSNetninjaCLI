@@ -1,0 +1,27 @@
+<div>
+
+  <!-- gambar bag tinju -->
+  <!-- <img src="/static/img/bag.png" alt="Logo Saja"> -->
+  <!-- <img src="@/gambar/logo.png" alt="Logo kedua"> -->
+  <div id="bag" v-bind:class="burstBagClass">
+
+  </div>
+
+  <!-- gambar health bar ketika tinju dipukul -->
+  <div id="bag-health">
+    <div v-bind:style="healthBarsStyle"></div>
+  </div>
+
+  <!-- game control tinju -->
+  <div class="center-tombol">
+    <div id="controls">
+      <button v-on:click="gebuk()" v-show="!isGameSelesai">Gebuk</button>
+      <button v-on:click="restartGame()" v-show="isGameSelesai">Ulangi</button>
+    </div>
+  </div>
+
+  <div class="center-tombol" v-if="isGameSelesai">
+    <h3 class="fontClassKO">Sudah KO, silahkan diulang kembali...</h3>
+  </div>
+
+</div>

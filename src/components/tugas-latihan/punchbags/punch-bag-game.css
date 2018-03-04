@@ -1,0 +1,50 @@
+#bag {
+  width: 200px;
+  height: 500px;
+  margin: 0 auto;
+  /* background: url(../../gambarkomponen/logo.png) center no-repeat; */
+  /* background: url(../../../gambar/logo.png) center no-repeat; */
+  background: url(./gambarguling/bag.png) center no-repeat;
+  background-size: 80%;
+}
+
+#bag.burstBag {
+  background: url(./gambarguling/bag-burst.png) center no-repeat;
+  background-size: 80%;
+}
+
+#bag-health {
+  width: 200px;
+  border: 2px solid #000;
+  margin: 0 auto 20px auto;
+}
+
+#bag-health div {
+  height: 20px;
+  width: 100%;
+  background: salmon;
+}
+
+.baghealthok div {
+  height: 20px;
+  background: green;
+}
+
+.baghealthkritis div {
+  heigh: 20px;
+  background: salmon;
+}
+
+.center-tombol {
+  text-align: center;
+}
+
+.fontClassKO {
+  font-family: 'Oleo Script Swash Caps', cursive, sans-serif;
+  color: brown;
+}
+
+#controls {
+  width: 120px;
+  margin: 0 auto;
+}
