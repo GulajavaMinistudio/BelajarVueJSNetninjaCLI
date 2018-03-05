@@ -1,0 +1,13 @@
+<div>
+  <h2>Mengenal Refs Element</h2>
+  <div>
+    <input type="text" ref="refInputSatu">
+    <button v-on:click="getRefInput()">Tombol Ambil Refs</button>
+    <button v-on:click="getRefsValueInput()">Tombol Ambil Refs Value</button>
+    <button v-on:click="gantiValueRefs()">Ganti Isi Input Refs</button>
+    <p>Output Ref : {{dataOutput}}</p>
+    <br>
+    <div ref="divTestRef">Ref Test Div</div>
+    <button v-on:click="getRefDivs()">Ambil Inner Text Div</button>
+  </div>
+</div>

@@ -4,6 +4,7 @@ import Router from 'vue-router';
 // import file router langsung tanpa menggunakan async loading seperti halnya memuat komponen
 import RouteLatihanMenengah from '@/components/latihan-menengah/router-modules-latihandasar/latihan-menengah-routes';
 import RouteLatihanDasar from '@/components/latihan-dasar/router-module-latihandasar/latihan-dasar-routes';
+import RouteLatihanTinggi from '@/components/latihan-tinggi-cli/router-module-latihantinggi/latihan-tinggi-routes';
 
 Vue.use(Router);
 
@@ -40,7 +41,8 @@ const baseRouters = [
 ];
 
 // gabungkan ke router base
-const routersApp = baseRouters.concat(RouteLatihanDasar).concat(RouteLatihanMenengah);
+const routersApp = baseRouters.concat(RouteLatihanDasar).concat(RouteLatihanMenengah)
+  .concat(RouteLatihanTinggi);
 
 export default new Router({
   routes: routersApp,
