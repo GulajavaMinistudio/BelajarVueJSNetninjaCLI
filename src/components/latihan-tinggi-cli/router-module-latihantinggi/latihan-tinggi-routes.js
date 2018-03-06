@@ -6,6 +6,9 @@ const MenuLatihanTinggiComponent = () => import(/* webpackChunkName: "menu-latih
 // latihan tentang refs
 const LatihanRefsComponent = () => import(/* webpackChunkName: "latihan-refs" */ '@/components/latihan-tinggi-cli/part16-refs/LatihanRefsComponent');
 
+// latihan tentang nested component
+const LatihanNestedComponent = () => import(/* webpackChunkName: "latihan-nested-component" */'@/components/latihan-tinggi-cli/part19-nestingcomponentss/ParentComponentNets.vue');
+
 
 export default [
   {
@@ -21,6 +24,11 @@ export default [
         path: 'latihan-refs-dom',
         name: 'LatihanRefsComponent',
         component: LatihanRefsComponent,
+      },
+      {
+        path: 'latihan-nested-component',
+        name: 'LatihanNestedComponent',
+        component: LatihanNestedComponent,
       },
       {
         path: '*',
