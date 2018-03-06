@@ -7,8 +7,10 @@ const MenuLatihanTinggiComponent = () => import(/* webpackChunkName: "menu-latih
 const LatihanRefsComponent = () => import(/* webpackChunkName: "latihan-refs" */ '@/components/latihan-tinggi-cli/part16-refs/LatihanRefsComponent');
 
 // latihan tentang nested component
-const LatihanNestedComponent = () => import(/* webpackChunkName: "latihan-nested-component" */'@/components/latihan-tinggi-cli/part19-nestingcomponentss/ParentComponentNets.vue');
+const LatihanNestedComponent = () => import(/* webpackChunkName: "latihan-nested-component" */'@/components/latihan-tinggi-cli/part19-nestingcomponentss/ParentComponentNets');
 
+// latihan tentang scoped css
+const ScopedCSSComponent = () => import('@/components/latihan-tinggi-cli/part20-scopedcss/ParentScopedCSS');
 
 export default [
   {
@@ -29,6 +31,11 @@ export default [
         path: 'latihan-nested-component',
         name: 'LatihanNestedComponent',
         component: LatihanNestedComponent,
+      },
+      {
+        path: 'scoped-css-component',
+        name: 'ScopedCSSComponent',
+        component: ScopedCSSComponent,
       },
       {
         path: '*',

@@ -7,6 +7,10 @@ import router from './router';
 // require('./libs/progressive-image.min.css');
 // require('./libs/progressive-image.min.js');
 
+// komponen yang akan dipakai global
+const globalChildsComponent = () => import(/* webpackChunkName: "child-global-component" */'@/components/latihan-tinggi-cli/part19-nestingcomponentss/ChildGlobalComponent');
+Vue.component('global-child-component', globalChildsComponent);
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
