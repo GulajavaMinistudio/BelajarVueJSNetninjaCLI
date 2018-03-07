@@ -12,6 +12,9 @@ const LatihanNestedComponent = () => import(/* webpackChunkName: "latihan-nested
 // latihan tentang scoped css
 const ScopedCSSComponent = () => import('@/components/latihan-tinggi-cli/part20-scopedcss/ParentScopedCSS');
 
+// latihan nested component dengan contoh penggunaannya
+const NestedComponentSampel = () => import(/* webpackChunkName: "sampel-nested-component" */'@/components/latihan-tinggi-cli/part21-nestcomponen-sample/ParentComponentHome');
+
 export default [
   {
     path: '/latihan-tinggi-atas',
@@ -36,6 +39,11 @@ export default [
         path: 'scoped-css-component',
         name: 'ScopedCSSComponent',
         component: ScopedCSSComponent,
+      },
+      {
+        path: 'sampel-nested-components',
+        name: 'SampelNestedComponent',
+        component: NestedComponentSampel,
       },
       {
         path: '*',
