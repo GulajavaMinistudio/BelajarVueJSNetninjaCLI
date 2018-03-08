@@ -1,3 +1,21 @@
-<div>
+<div id="kucingninja">
+  <ul>
+    <li v-for="(kucing, index) in kucings" v-on:click="showHideSpesial(kucing)">
+      <h2>{{kucing.nama}}</h2>
+      <h3 v-show="kucing.showSpesial">{{kucing.spesial}}</h3>
+      <button v-on:click="getContentArrayKucing(kucing)">Get Content Kucing</button>
+    </li>
+  </ul>
+  <p>Dengan Menggunakan Fungsi Splice</p>
+  <div>
+    <ul>
+      <li v-for="(kucing, index) in kucings" v-bind:key="kucing.nama">
+        <h2>{{kucing.nama}}</h2>
+        <h3 v-show="kucing.showSpesial">{{kucing.spesial}}</h3>
+        <button v-on:click="hapusArrayDimaksud(index)">Hapus Ini</button>
+        <button v-on:click="showHideSpesialArrays(kucing)">Edit Array</button>
+      </li>
+    </ul>
+  </div>
 
 </div>
