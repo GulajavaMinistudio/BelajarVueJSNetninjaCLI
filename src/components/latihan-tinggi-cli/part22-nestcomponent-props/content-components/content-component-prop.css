@@ -1,0 +1,27 @@
+#buahbuahan {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  flex-grow: 1;
+  flex-basis: 100px;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid red;
+  margin: 10px;
+}
+
+.backgradient {
+  background: linear-gradient(160.386695060354deg, rgba(73, 81, 242,1) 6.849845201238391%,rgba(72, 81, 241,1) 6.849845201238391%,rgba(56, 119, 235,1) 82.70123839009287%);
+}

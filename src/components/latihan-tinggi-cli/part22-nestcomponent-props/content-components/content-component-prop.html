@@ -1,0 +1,13 @@
+<div id="buahbuahan">
+  <ul>
+    <li v-for="(buah, index) in buahbuahan" v-bind:key="buah.nama" v-on:click="showHideSpecial(buah)">
+      <h2>{{buah.nama}}</h2>
+      <h3 v-show="buah.isShowSpec">{{buah.spesial}}</h3>
+    </li>
+  </ul>
+  <!-- <p>Tes isi Array Props</p> -->
+  <!-- jika data berbentuk array, jika array / objeknya dimutasi, maka parent nya juga ikut dimutasi -->
+  <!-- <p>{{buahbuahan}}</p> -->
+  <!-- jika data nya non array/object, jika dimutasi tidak berubah bentuknya di parent -->
+  <!-- <p v-on:click="modifikasiNanasBuah()">{{nanasbuah}}</p> -->
+</div>

@@ -10,10 +10,13 @@ const LatihanRefsComponent = () => import(/* webpackChunkName: "latihan-refs" */
 const LatihanNestedComponent = () => import(/* webpackChunkName: "latihan-nested-component" */'@/components/latihan-tinggi-cli/part19-nestingcomponentss/ParentComponentNets');
 
 // latihan tentang scoped css
-const ScopedCSSComponent = () => import('@/components/latihan-tinggi-cli/part20-scopedcss/ParentScopedCSS');
+const ScopedCSSComponent = () => import(/* webpackChunkName: "scoped-css-component" */'@/components/latihan-tinggi-cli/part20-scopedcss/ParentScopedCSS');
 
 // latihan nested component dengan contoh penggunaannya
 const NestedComponentSampel = () => import(/* webpackChunkName: "sampel-nested-component" */'@/components/latihan-tinggi-cli/part21-nestcomponen-sample/ParentComponentHome');
+
+// latihan tentang penggunaan props untuk komunikasi ke komponen anakan
+const ParentComponentProps = () => import(/* webpackChunkName: "props-nested-component" */'@/components/latihan-tinggi-cli/part22-nestcomponent-props/ParentComponentProp.vue');
 
 export default [
   {
@@ -44,6 +47,11 @@ export default [
         path: 'sampel-nested-components',
         name: 'SampelNestedComponent',
         component: NestedComponentSampel,
+      },
+      {
+        path: 'props-nested-component',
+        name: 'ParentComponentProps',
+        component: ParentComponentProps,
       },
       {
         path: '*',
