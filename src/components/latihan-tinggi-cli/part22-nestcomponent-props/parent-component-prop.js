@@ -31,7 +31,6 @@ export default {
           nama: 'Salak', spesial: 'gurih', isShowSpec: false,
         },
       ],
-      buahPropString: JSON.stringify(this.buahbuahanprop),
       buahSingleProp: 'Nanas',
     };
   },
