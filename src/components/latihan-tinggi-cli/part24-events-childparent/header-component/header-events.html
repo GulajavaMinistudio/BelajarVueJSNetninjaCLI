@@ -1,5 +1,7 @@
 <div>
-  <header>
+  <header v-on:click="gantiJudul()">
     <h1>{{judulHeader}}</h1>
+    <h3>{{judulHeaderProp}}</h3>
   </header>
+  <button v-on:click="gantiJudulEvents()">Ganti Judul via Parent</button>
 </div>

@@ -36,7 +36,10 @@ export default {
     };
   },
   methods: {
-
+    gantiJudulEvents(payload) {
+      console.log(payload);
+      this.judulHalaman = payload;
+    },
   },
   computed: {
 

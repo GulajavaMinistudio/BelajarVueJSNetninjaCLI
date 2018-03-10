@@ -23,7 +23,8 @@ export default {
       this.judulHeader = `${this.judulHeader} Diganti Baru`;
     },
     gantiJudulEvents() {
-
+      const stringPesan = 'Musim Buah Durian';
+      this.$emit('gantiJudulParent', stringPesan);
     },
   },
   computed: {
