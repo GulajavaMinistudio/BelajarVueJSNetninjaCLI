@@ -1,7 +1,7 @@
 export default {
-  name: 'FooterComponentProps',
+  name: 'FooterEventComponent',
   props: {
-    subjudulfooter: {
+    subjudulprops: {
       type: String,
       required: true,
       default: 'Sub Judul Footer Kosong',
@@ -10,17 +10,16 @@ export default {
   data() {
     return {
       dataCopyright: 'Copyright @',
-      subjudulCopyright: this.subjudulfooter,
+      subjudulCopyright: this.subjudulprops,
     };
   },
   methods: {
 
   },
   computed: {
-    copyRightTanggal() {
+    copyrightTanggal() {
       const dates = new Date();
-      return `${this.dataCopyright} ${dates.getFullYear()} Kucing Buah ${this.subjudulCopyright}`;
+      return `${this.dataCopyright} ${dates.getFullYear()} Kucing ${this.subjudulCopyright}`;
     },
   },
 };
-

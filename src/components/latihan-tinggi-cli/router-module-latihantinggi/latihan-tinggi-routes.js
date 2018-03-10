@@ -16,7 +16,10 @@ const ScopedCSSComponent = () => import(/* webpackChunkName: "scoped-css-compone
 const NestedComponentSampel = () => import(/* webpackChunkName: "sampel-nested-component" */'@/components/latihan-tinggi-cli/part21-nestcomponen-sample/ParentComponentHome');
 
 // latihan tentang penggunaan props untuk komunikasi ke komponen anakan
-const ParentComponentProps = () => import(/* webpackChunkName: "props-nested-component" */'@/components/latihan-tinggi-cli/part22-nestcomponent-props/ParentComponentProp.vue');
+const ParentComponentProps = () => import(/* webpackChunkName: "props-nested-component" */'@/components/latihan-tinggi-cli/part22-nestcomponent-props/ParentComponentProp');
+
+// latihan tentang penggunaan events untuk komunikasi komponen anak ke komponen orang tua
+const ParentHomeEvents = () => import(/* webpackChunkName: "events-nested-component" */'@/components/latihan-tinggi-cli/part24-events-childparent/ParentHomeEvents');
 
 export default [
   {
@@ -52,6 +55,11 @@ export default [
         path: 'props-nested-component',
         name: 'ParentComponentProps',
         component: ParentComponentProps,
+      },
+      {
+        path: 'events-nested-component',
+        name: 'ParentHomeEvents',
+        component: ParentHomeEvents,
       },
       {
         path: '*',

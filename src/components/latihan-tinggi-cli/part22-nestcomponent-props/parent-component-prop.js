@@ -32,6 +32,7 @@ export default {
         },
       ],
       buahSingleProp: 'Nanas',
+      subjudulHeader: 'Buah lagi Musim di Bandung',
     };
   },
   methods: {

@@ -1,8 +1,8 @@
 <div>
   <!-- <p>{{buahbuahanprop}}</p> -->
   <!-- <p>{{buahSingleProp}}</p> -->
-  <props-header-component></props-header-component>
+  <props-header-component v-bind:subjudul="subjudulHeader"></props-header-component>
   <!-- props mengirim data dari parent component ke child component -->
   <props-content-component v-bind:buahprop="buahbuahanprop" v-bind:nanasprop="buahSingleProp"></props-content-component>
-  <props-footer-component></props-footer-component>
+  <props-footer-component v-bind:subjudulfooter="subjudulHeader"></props-footer-component>
 </div>
