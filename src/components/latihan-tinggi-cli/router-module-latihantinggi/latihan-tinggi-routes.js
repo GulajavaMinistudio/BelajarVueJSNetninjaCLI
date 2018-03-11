@@ -21,6 +21,9 @@ const ParentComponentProps = () => import(/* webpackChunkName: "props-nested-com
 // latihan tentang penggunaan events untuk komunikasi komponen anak ke komponen orang tua
 const ParentHomeEvents = () => import(/* webpackChunkName: "events-nested-component" */'@/components/latihan-tinggi-cli/part24-events-childparent/ParentHomeEvents');
 
+// latihan tentang penggunaan event bus di dalam vue
+const ParentHomeEventBus = () => import(/* webpackChunkName: "eventbus-component" */'@/components/latihan-tinggi-cli/part25-eventbuses/ParentHomeEventsBus');
+
 export default [
   {
     path: '/latihan-tinggi-atas',
@@ -60,6 +63,11 @@ export default [
         path: 'events-nested-component',
         name: 'ParentHomeEvents',
         component: ParentHomeEvents,
+      },
+      {
+        path: 'eventbus-component',
+        name: 'ParentHomeEventBus',
+        component: ParentHomeEventBus,
       },
       {
         path: '*',
