@@ -24,6 +24,9 @@ const ParentHomeEvents = () => import(/* webpackChunkName: "events-nested-compon
 // latihan tentang penggunaan event bus di dalam vue
 const ParentHomeEventBus = () => import(/* webpackChunkName: "eventbus-component" */'@/components/latihan-tinggi-cli/part25-eventbuses/ParentHomeEventsBus');
 
+// latihan tentang penggunaan slots di komponen
+const SlotKomponens = () => import(/* webpackChunkName: "slots-component" */'@/components/latihan-tinggi-cli/part27-slotss/SlotKomponen.vue');
+
 export default [
   {
     path: '/latihan-tinggi-atas',
@@ -68,6 +71,11 @@ export default [
         path: 'eventbus-component',
         name: 'ParentHomeEventBus',
         component: ParentHomeEventBus,
+      },
+      {
+        path: 'slot-komponen',
+        name: 'SlotComponents',
+        component: SlotKomponens,
       },
       {
         path: '*',
