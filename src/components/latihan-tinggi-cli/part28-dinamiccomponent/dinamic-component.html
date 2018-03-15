@@ -1,0 +1,10 @@
+<div>
+  <h1>Dynamic Component</h1>
+  <button v-on:click="gantiFormSatu()">Ganti Komponen Satu</button>
+  <button v-on:click="gantiFormDua()">Ganti Komponen Dua</button>
+
+  <!-- keep alive untuk data di dalam komponen yang diganti tetap ada -->
+  <keep-alive>
+    <component v-bind:is="component_dinamis"></component>
+  </keep-alive>
+</div>

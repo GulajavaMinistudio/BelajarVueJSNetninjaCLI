@@ -25,7 +25,10 @@ const ParentHomeEvents = () => import(/* webpackChunkName: "events-nested-compon
 const ParentHomeEventBus = () => import(/* webpackChunkName: "eventbus-component" */'@/components/latihan-tinggi-cli/part25-eventbuses/ParentHomeEventsBus');
 
 // latihan tentang penggunaan slots di komponen
-const SlotKomponens = () => import(/* webpackChunkName: "slots-component" */'@/components/latihan-tinggi-cli/part27-slotss/SlotKomponen.vue');
+const SlotKomponens = () => import(/* webpackChunkName: "slots-component" */'@/components/latihan-tinggi-cli/part27-slotss/SlotKomponen');
+
+// latihan tentang penggunaan dynamic component
+const DinamicComponent = () => import(/* webpackChunkName: "dinamics-component" */'@/components/latihan-tinggi-cli/part28-dinamiccomponent/DynamicComponents');
 
 export default [
   {
@@ -76,6 +79,11 @@ export default [
         path: 'slot-komponen',
         name: 'SlotComponents',
         component: SlotKomponens,
+      },
+      {
+        path: 'dinamic-component',
+        name: 'DinamicComponent',
+        component: DinamicComponent,
       },
       {
         path: '*',

@@ -1,0 +1,17 @@
+<div>
+  <formulir-bantuan>
+    <div slot="form-header">
+      <h3>Form Satu - Kontak Saya</h3>
+      <p>Silahkan isi form ini untuk hubungi saya</p>
+    </div>
+    <div slot="form-fields">
+      <input type="text" placeholder="nama kamu" required>
+      <label for="teks_panjangarea">Pesan Kamu :</label>
+      <textarea name="teks_panjangarea" id="teks_panjangarea" cols="30" rows="10" required>
+      </textarea>
+    </div>
+    <div slot="form-controls">
+      <button v-on:click.prevent="handleKirim()">Kirim Pesan</button>
+    </div>
+  </formulir-bantuan>
+</div>
