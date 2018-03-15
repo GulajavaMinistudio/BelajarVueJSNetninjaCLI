@@ -1,30 +1,54 @@
 <div>
-  <h3>Slot Biasa</h3>
-    <slot></slot>
+  <!-- <h3>Slot Biasa</h3>
+  <slot></slot>
+  <h3>Slot Kembaran yang Biasa</h3>
+  <slot></slot>
   <br>
-  <h1>Silahkan Isi Formulir di Bawah Ini</h1>
+  <br>
+  <br> -->
+  <!-- <h3>Slot dengan Nama</h3>
+  <slot name="slot_judulh3"></slot>
+  <h4>Saya adalah Form Helper</h4>
+  <slot name="slot_paragrafp"></slot>
+  <slot name="slot_paragraf_data"></slot>
+  <br>
+  <br>
+  <br> -->
+  <h2>Silahkan Isi Formulir di Bawah Ini</h2>
   <form>
-
     <div id="form-header">
-
+      <slot name="form-header"></slot>
     </div>
 
     <div id="form-fields">
-
+      <slot name="form-fields"></slot>
     </div>
 
     <div id="form-controls">
+      <slot name="form-controls"></slot>
+    </div>
 
+    <div>
+      <slot name="pesan_kirim"></slot>
     </div>
 
     <div id="useful-links">
       <ul>
-        <li><a href="#">Link pura pura dalam perahu</a></li>
-        <li><a href="#">Link pura pura dalam perahu</a></li>
-        <li><a href="#">Link pura pura dalam perahu</a></li>
-        <li><a href="#">Link pura pura dalam perahu</a></li>
+        <li>
+          <a href="#">Link pura pura dalam perahu</a>
+        </li>
+        <li>
+          <a href="#">Link pura pura dalam perahu</a>
+        </li>
+        <li>
+          <a href="#">Link pura pura dalam perahu</a>
+        </li>
+        <li>
+          <a href="#">Link pura pura dalam perahu</a>
+        </li>
       </ul>
     </div>
 
   </form>
+
 </div>

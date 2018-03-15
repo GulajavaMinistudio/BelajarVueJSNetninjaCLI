@@ -1,9 +1,46 @@
 <div>
   <div>
-    <p>Slot Bagian Pertama</p>
-    <formhelperslot-komponents>
-      <h2>Saya adalah Judul dari Parent COmponent</h2>
+    <!-- <p>Slot Bagian Pertama</p> -->
+    <!-- <formhelperslot-komponents>
+      <h2>Saya adalah Judul dari Parent Component</h2>
       <p>Saya adalah paragraf dari parent component</p>
+    </formhelperslot-komponents> -->
+    <!-- <br> -->
+    <h1>Slot Bagian Kedua</h1>
+    <formhelperslot-komponents>
+      <!-- <formhelperslot-komponents>
+      <h3 slot="slot_judulh3">Saya adalah Judul Slot Bernama</h3>
+      <p slot="slot_paragrafp">Saya adalah paragraf slot bernama</p>
+      <p slot="slot_paragraf_data">Kiriman Data Slot Parent : {{dataSlotParent}}</p> -->
+      <div slot="form-header">
+        <h3>Ini adalah Judul Form</h3>
+        <p>Informasi untuk bagian form</p>
+      </div>
+      <div slot="form-fields">
+        <input type="text" placeholder="nama isian" required>
+        <input type="password" placeholder="kata kunci password" required>
+      </div>
+      <div slot="form-controls">
+        <button v-on:click="handleKirimData()">Kirim Masuk Login</button>
+      </div>
+      <div slot="pesan_kirim">
+        <p>{{pesanTerkirim}}</p>
+      </div>
     </formhelperslot-komponents>
+
+    <br>
+    <br>
+    <h1>Scoped Named Slots</h1>
+    <namedscopedslot-komponents>
+      <div slot="namedslot" slot-scope="propsScope">
+        <p>Slot Scope Sampel Nih</p>
+        <p>Pesan dari ChildS : {{propsScope.text}}</p>
+      </div>
+      <div slot="slothello" slot-scope="scopePesan">
+        <p>Slot Sampel Berisi Pesan</p>
+        <p>Pesan Scope Bagian 2 : {{scopePesan.text}}</p>
+      </div>
+    </namedscopedslot-komponents>
+
   </div>
 </div>
