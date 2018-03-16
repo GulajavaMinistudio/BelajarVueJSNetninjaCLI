@@ -6,12 +6,28 @@
       <input type="text" required v-model.lazy="blog.judul">
       <label>Blog Content: </label>
       <textarea v-model.lazy="blog.konten" required></textarea>
+      <div id="checkboxes">
+        <label>Berita</label>
+        <input type="checkbox" value="berita" v-model="blog.kategoris">
+        <label>Olahraga</label>
+        <input type="checkbox" value="olahraga" v-model="blog.kategoris">
+        <label>Ekonomi</label>
+        <input type="checkbox" value="ekonomi" v-model="blog.kategoris">
+        <label>Teknologi</label>
+        <input type="checkbox" value="teknologi" v-model="blog.kategoris">
+      </div>
     </form>
     <div id="preview">
       <h3>Preview Blog</h3>
       <p>Blog Title: {{blog.judul}}</p>
       <p>Blog Content:</p>
       <p>{{blog.konten}}</p>
+      <p>Blog Categories:</p>
+      <ul>
+        <li v-for="kategori in blog.kategoris">
+          {{kategori}}
+        </li>
+      </ul>
     </div>
   </div>
 </div>

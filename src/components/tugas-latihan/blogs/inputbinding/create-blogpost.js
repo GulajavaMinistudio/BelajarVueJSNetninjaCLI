@@ -5,6 +5,7 @@ export default {
       blog: {
         judul: '',
         konten: '',
+        kategoris: [],
       },
     };
   },

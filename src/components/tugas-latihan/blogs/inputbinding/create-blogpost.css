@@ -28,3 +28,12 @@ input[type="text"], textarea{
 h3{
   margin-top: 10px;
 }
+
+#checkboxes input{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#checkboxes label{
+  display: inline-block;
+}
