@@ -1,0 +1,17 @@
+<div>
+  <div id="add-blog">
+    <h2>Tambah Kiriman Baru</h2>
+    <form>
+      <label>Blog Title:</label>
+      <input type="text" required v-model.lazy="blog.judul">
+      <label>Blog Content: </label>
+      <textarea v-model.lazy="blog.konten" required></textarea>
+    </form>
+    <div id="preview">
+      <h3>Preview Blog</h3>
+      <p>Blog Title: {{blog.judul}}</p>
+      <p>Blog Content:</p>
+      <p>{{blog.konten}}</p>
+    </div>
+  </div>
+</div>
