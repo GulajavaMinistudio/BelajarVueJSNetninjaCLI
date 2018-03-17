@@ -18,7 +18,7 @@ const HomeComponent = () => import(/* webpackChunkName: "home-component" */ '@/c
 const PunchBagGame = () => import(/* webpackChunkName: "pukul-guling-tinju" */ '@/components/tugas-latihan/punchbags/PunchBagGame');
 
 // halaman membuat kiriman blog
-const CreateBlogPost = () => import(/* webpackChunkName: "buat-kiriman-blog" */'@/components/tugas-latihan/blogs/inputbinding/CreatePosts');
+const CreateBlogPost = () => import(/* webpackChunkName: "buat-kiriman-blog" */'@/components/tugas-latihan/blogs/createblog/CreatePosts');
 
 // variabel router dipisah
 const baseRouters = [
