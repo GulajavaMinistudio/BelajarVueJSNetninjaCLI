@@ -1,3 +1,9 @@
 <div>
-
+  <div id="show-blogs">
+    <h1>Daftar Artikel Blog</h1>
+    <div v-for="artikel in listArtikel" class="single-blog">
+      <h2>{{artikel.title}}</h2>
+      <article>{{artikel.body}}</article>
+    </div>
+  </div>
 </div>

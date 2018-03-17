@@ -20,6 +20,9 @@ const PunchBagGame = () => import(/* webpackChunkName: "pukul-guling-tinju" */ '
 // halaman membuat kiriman blog
 const CreateBlogPost = () => import(/* webpackChunkName: "buat-kiriman-blog" */'@/components/tugas-latihan/blogs/createblog/CreatePosts');
 
+// halaman yang berisi daftar kiriman blog
+const BlogListPost = () => import(/* webpackChunkName: "daftar-kiriman-blog" */'@/components/tugas-latihan/blogs/bloglist/BlogList');
+
 // variabel router dipisah
 const baseRouters = [
   {
@@ -41,6 +44,11 @@ const baseRouters = [
     path: '/create-blog-kiriman',
     name: 'CreateKirimanBlog',
     component: CreateBlogPost,
+  },
+  {
+    path: '/blog-list-post',
+    name: 'BlogListPost',
+    component: BlogListPost,
   },
   {
     path: '*',
