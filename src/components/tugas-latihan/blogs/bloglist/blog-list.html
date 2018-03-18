@@ -1,8 +1,9 @@
 <div>
-  <div id="show-blogs">
+  <!-- <div v-temaKolom:column = "'narrow'" id="show-blogs"> -->
+  <div v-temaKolom:column="nilaiTema" id="show-blogs">
     <h1>Daftar Artikel Blog</h1>
     <div v-for="artikel in listArtikel" class="single-blog">
-      <h2>{{artikel.title}}</h2>
+      <h2 v-warnawarni>{{artikel.title}}</h2>
       <article>{{artikel.body}}</article>
     </div>
   </div>

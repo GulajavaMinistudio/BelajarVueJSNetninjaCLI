@@ -11,6 +11,14 @@ import router from './router';
 const globalChildsComponent = () => import(/* webpackChunkName: "child-global-component" */'@/components/latihan-tinggi-cli/part19-nestingcomponentss/ChildGlobalComponent');
 Vue.component('global-child-component', globalChildsComponent);
 
+// registrasi directives secara global
+Vue.directive('warnawarni', {
+  bind(el) {
+    const els = el;
+    els.style.color = `#${Math.random().toString(16).slice(2, 8)}`;
+  },
+});
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
