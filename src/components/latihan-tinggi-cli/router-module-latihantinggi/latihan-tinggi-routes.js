@@ -30,6 +30,9 @@ const SlotKomponens = () => import(/* webpackChunkName: "slots-component" */'@/c
 // latihan tentang penggunaan dynamic component
 const DinamicComponent = () => import(/* webpackChunkName: "dinamics-component" */'@/components/latihan-tinggi-cli/part28-dinamiccomponent/DynamicComponents');
 
+// latihan menggunakan custom directives
+const CustomDirektives = () => import(/* webpackChunkName: "customdirektives-component" */'@/components/latihan-tinggi-cli/part34-customdirectives/CustomDirectives');
+
 export default [
   {
     path: '/latihan-tinggi-atas',
@@ -84,6 +87,11 @@ export default [
         path: 'dinamic-component',
         name: 'DinamicComponent',
         component: DinamicComponent,
+      },
+      {
+        path: 'custom-direktives',
+        name: 'CustomDirektives',
+        component: CustomDirektives,
       },
       {
         path: '*',
