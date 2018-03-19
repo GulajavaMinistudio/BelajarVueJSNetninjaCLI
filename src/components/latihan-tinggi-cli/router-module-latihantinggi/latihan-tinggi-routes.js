@@ -33,6 +33,10 @@ const DinamicComponent = () => import(/* webpackChunkName: "dinamics-component" 
 // latihan menggunakan custom directives
 const CustomDirektives = () => import(/* webpackChunkName: "customdirektives-component" */'@/components/latihan-tinggi-cli/part34-customdirectives/CustomDirectives');
 
+// latihan menggunakan filter di dalam komponen
+const FilterKomponen = () => import(/* webpackChunkName: "filteran-component" */'@/components/latihan-tinggi-cli/part35-filteran/FilterKomponen');
+
+
 export default [
   {
     path: '/latihan-tinggi-atas',
@@ -92,6 +96,11 @@ export default [
         path: 'custom-direktives',
         name: 'CustomDirektives',
         component: CustomDirektives,
+      },
+      {
+        path: 'filter-komponen',
+        name: 'FilterKomponen',
+        component: FilterKomponen,
       },
       {
         path: '*',
