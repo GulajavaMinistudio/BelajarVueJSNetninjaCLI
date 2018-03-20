@@ -36,6 +36,9 @@ const CustomDirektives = () => import(/* webpackChunkName: "customdirektives-com
 // latihan menggunakan filter di dalam komponen
 const FilterKomponen = () => import(/* webpackChunkName: "filteran-component" */'@/components/latihan-tinggi-cli/part35-filteran/FilterKomponen');
 
+// latihan menggunakan mixins
+const MixinVues = () => import('@/components/latihan-tinggi-cli/part38-miksins/VueMixins');
+
 
 export default [
   {
@@ -101,6 +104,11 @@ export default [
         path: 'filter-komponen',
         name: 'FilterKomponen',
         component: FilterKomponen,
+      },
+      {
+        path: 'mixins-vues',
+        name: 'VueMixins',
+        component: MixinVues,
       },
       {
         path: '*',

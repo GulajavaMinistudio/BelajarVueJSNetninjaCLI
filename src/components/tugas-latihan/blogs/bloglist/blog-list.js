@@ -1,12 +1,18 @@
 import axios from 'axios';
+import mixinData from '@/components/miksins/MixinDatas';
 
 export default {
   name: 'BlogListArtikel',
+  mixins: [
+    mixinData,
+  ],
   data() {
     return {
       listArtikel: [],
       // nilai tema wide atau narrow
       nilaiTema: 'narrow',
+      katakuncipencarian: '',
+      hintkatakunci: 'Masukkan kata kunci pencarian disini...',
     };
   },
   methods: {
@@ -22,7 +28,15 @@ export default {
     },
   },
   computed: {
-
+    /**
+     * @description Menggunakan computed property untuk memfilter artikel yang telah muncul
+     */
+    listFiltered() {
+      return this.listArtikel.filter((artikel) => {
+        const isCocok = artikel.title.match(this.katakuncipencarian);
+        return isCocok;
+      });
+    },
   },
   directives: {
     temaKolom: {

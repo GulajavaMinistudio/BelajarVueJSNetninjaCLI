@@ -9,3 +9,7 @@
   box-sizing: border-box;
   background: #eee;
 }
+
+.input-class {
+  width: 100%;
+}
