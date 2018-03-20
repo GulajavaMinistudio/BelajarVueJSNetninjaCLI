@@ -19,6 +19,17 @@ Vue.directive('warnawarni', {
   },
 });
 
+// filter untuk huruf kapital global
+Vue.filter('kapitalinhuruf', (value) => {
+  const stringBesar = value.toString().toUpperCase();
+  return stringBesar;
+});
+
+Vue.filter('snippets', (value) => {
+  const slicedString = `${value.toString().slice(0, 100)}...`;
+  return slicedString;
+});
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
