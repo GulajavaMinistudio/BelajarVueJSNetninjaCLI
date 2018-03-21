@@ -5,6 +5,7 @@ import Router from 'vue-router';
 import RouteLatihanMenengah from '@/components/latihan-menengah/router-modules-latihandasar/latihan-menengah-routes';
 import RouteLatihanDasar from '@/components/latihan-dasar/router-module-latihandasar/latihan-dasar-routes';
 import RouteLatihanTinggi from '@/components/latihan-tinggi-cli/router-module-latihantinggi/latihan-tinggi-routes';
+import RouteLatihanBlogs from '@/components/tugas-latihan/blogs/routermoduleblogs/router-blog';
 
 Vue.use(Router);
 
@@ -58,7 +59,7 @@ const baseRouters = [
 
 // gabungkan ke router base
 const routersApp = baseRouters.concat(RouteLatihanDasar).concat(RouteLatihanMenengah)
-  .concat(RouteLatihanTinggi);
+  .concat(RouteLatihanTinggi).concat(RouteLatihanBlogs);
 
 export default new Router({
   routes: routersApp,
