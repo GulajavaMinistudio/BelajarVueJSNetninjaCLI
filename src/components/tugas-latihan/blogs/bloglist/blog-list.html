@@ -7,7 +7,8 @@
     </div>
     <!-- test jika menggunakan mixins untuk impor fungsi computed -->
     <!-- <div v-for="artikel in listFiltered" class="single-blog"> -->
-    <div v-for="artikel in filterlist" class="single-blog">
+    <div v-for="artikel in filterlist" class="single-blog" v-on:click="navigasiDetailBlog(artikel)">
+      <!-- <router-link v-bind:to="'/blogs-vuejs/detail-artikel/' + artikel.id"></router-link> -->
       <h2 v-warnawarni>{{artikel.title | kapitalinhuruf}}</h2>
       <article>{{artikel.body | snippets}}</article>
     </div>

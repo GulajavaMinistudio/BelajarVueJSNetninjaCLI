@@ -7,6 +7,9 @@ const ArtikelBlogs = () => import(/* webpackChunkName: "list-artikel-blog" */'@/
 // artikel blog membuat kiriman terbaru
 const CreateArtikelBlog = () => import(/* webpackChunkName: "create-artikel-blog" */'@/components/tugas-latihan/blogs/createblog/CreatePosts');
 
+// detail artikel dari blogs
+const DetailArtikel = () => import(/* webpackChunkName: "detail-artikel-blog" */'@/components/tugas-latihan/blogs/detailblogs/DetailBlogs');
+
 export default [
   {
     path: '/blogs-vuejs',
@@ -21,6 +24,11 @@ export default [
         path: 'create-artikels',
         name: 'CreateArtikelBlog',
         component: CreateArtikelBlog,
+      },
+      {
+        path: 'detail-artikel/:blog_id/:pesantambahan',
+        name: 'DetailArtikel',
+        component: DetailArtikel,
       },
     ],
   },

@@ -26,6 +26,10 @@ export default {
           console.log(err);
         });
     },
+    navigasiDetailBlog(valArtikel) {
+      const idblog = valArtikel.id;
+      this.$router.push({ name: 'DetailArtikel', params: { blog_id: idblog, pesantambahan: 'HelloWorldRouterblogs' } });
+    },
   },
   computed: {
     /**
