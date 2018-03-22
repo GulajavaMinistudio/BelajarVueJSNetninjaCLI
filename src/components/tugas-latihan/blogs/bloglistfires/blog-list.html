@@ -1,0 +1,16 @@
+<div>
+  <!-- <div v-temaKolom:column = "'narrow'" id="show-blogs"> -->
+  <div v-temaKolom:column="nilaiTema" id="show-blogs">
+    <h1>Daftar Artikel Blog</h1>
+    <div class="ui input input-class">
+        <input type="text" v-model="katakuncipencarian" v-bind:placeholder="hintkatakunci">
+    </div>
+    <!-- test jika menggunakan mixins untuk impor fungsi computed -->
+    <!-- <div v-for="artikel in listFiltered" class="single-blog"> -->
+    <div v-for="artikel in filterlist" class="single-blog" v-on:click="navigasiDetailBlog(artikel)">
+      <!-- <router-link v-bind:to="'/blogs-vuejs/detail-artikel/' + artikel.id"></router-link> -->
+      <h2 v-warnawarni>{{artikel.title | kapitalinhuruf}}</h2>
+      <article>{{artikel.body | snippets}}</article>
+    </div>
+  </div>
+</div>

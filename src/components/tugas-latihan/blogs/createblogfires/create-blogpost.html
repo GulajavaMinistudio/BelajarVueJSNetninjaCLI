@@ -1,0 +1,46 @@
+<div>
+  <div id="add-blog">
+    <h2>Tambah Kiriman Baru</h2>
+    <form v-if="!isDataTerkirim">
+      <label>Blog Title:</label>
+      <input type="text" required v-model.lazy="blog.judul">
+      <label>Blog Content: </label>
+      <textarea v-model.lazy="blog.konten" required></textarea>
+      <div id="checkboxes">
+        <label>Berita</label>
+        <input type="checkbox" value="berita" v-model="blog.kategoris">
+        <label>Olahraga</label>
+        <input type="checkbox" value="olahraga" v-model="blog.kategoris">
+        <label>Ekonomi</label>
+        <input type="checkbox" value="ekonomi" v-model="blog.kategoris">
+        <label>Teknologi</label>
+        <input type="checkbox" value="teknologi" v-model="blog.kategoris">
+      </div>
+      <label>Penulis:</label>
+      <select name="labelpenulis" id="labelpenulis" v-model="blog.penulis">
+        <option value="" disabled>Pilih salah satu penulis</option>
+        <option v-for="penulis in listPenulis" v-bind:value="penulis">{{penulis}}</option>
+      </select>
+      <button v-on:click.prevent="kirimBlogPesan()">Kirim Blog</button>
+    </form>
+    <div v-if="isDataTerkirim">
+      <h3>Terima kasih telah mengirim pesan ke Blog</h3>
+    </div>
+    <div v-show="isLoadingProg">
+      <h3>Mengirim data...</h3>
+    </div>
+    <div id="preview">
+      <h3>Preview Blog</h3>
+      <p>Blog Title: {{blog.judul}}</p>
+      <p>Blog Content:</p>
+      <p>{{blog.konten}}</p>
+      <p>Blog Categories:</p>
+      <ul>
+        <li v-for="kategori in blog.kategoris">
+          {{kategori}}
+        </li>
+      </ul>
+      <p>Penulis : {{blog.penulis}}</p>
+    </div>
+  </div>
+</div>
