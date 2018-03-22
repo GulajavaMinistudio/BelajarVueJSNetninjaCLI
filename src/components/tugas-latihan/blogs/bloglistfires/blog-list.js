@@ -1,5 +1,6 @@
 import axios from 'axios';
 import mixinData from '@/components/miksins/MixinDatas';
+import { URLFIREBASE } from '@/components/konstans/Konstans';
 
 export default {
   name: 'BlogListArtikelFirebase',
@@ -13,14 +14,37 @@ export default {
       nilaiTema: 'narrow',
       katakuncipencarian: '',
       hintkatakunci: 'Masukkan kata kunci pencarian disini...',
+      urlPost: `${URLFIREBASE}/rest/post.json`,
     };
   },
   methods: {
     getListArtikel() {
-      axios.get('https://jsonplaceholder.typicode.com/posts')
+      axios.get(this.urlPost)
         .then((resp) => {
-          console.log(resp.data);
-          this.listArtikel = resp.data.slice(0, 10);
+          // console.log(resp.data);
+          const datajson = JSON.stringify(resp.data);
+          // console.log(datajson);
+          return JSON.parse(datajson);
+        })
+        .then((data) => {
+          const promised = new Promise((resolved) => {
+            const blogArray = [];
+            // ambil daftar key ke array dari json object
+            const keysObject = Object.keys(data);
+            const panjangDataKey = keysObject.length;
+            // loop berdasarkan key yang diperoleh
+            for (let i = 0; i < panjangDataKey; i += 1) {
+              const key = keysObject[i];
+              const dataObject = data[key];
+              dataObject.id = key;
+              blogArray.push(dataObject);
+            }
+            resolved(blogArray);
+          });
+          return promised;
+        })
+        .then((dataarray) => {
+          this.listArtikel = dataarray;
         })
         .catch((err) => {
           console.log(err);
@@ -28,7 +52,7 @@ export default {
     },
     navigasiDetailBlog(valArtikel) {
       const idblog = valArtikel.id;
-      this.$router.push({ name: 'DetailArtikel', params: { blog_id: idblog, pesantambahan: 'HelloWorldRouterblogs' } });
+      this.$router.push({ name: 'DetailBlogFires', params: { blog_id: idblog } });
     },
   },
   computed: {
@@ -37,7 +61,7 @@ export default {
      */
     listFiltered() {
       return this.listArtikel.filter((artikel) => {
-        const isCocok = artikel.title.match(this.katakuncipencarian);
+        const isCocok = artikel.judul.match(this.katakuncipencarian);
         return isCocok;
       });
     },

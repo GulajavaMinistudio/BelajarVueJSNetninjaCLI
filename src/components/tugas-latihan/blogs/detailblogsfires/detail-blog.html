@@ -1,4 +1,10 @@
 <div id="single-blog">
-  <h1>{{blogcontent.title}}</h1>
-  <article>{{blogcontent.body}}</article>
+  <h1>{{blogcontent.judul}}</h1>
+  <article>{{blogcontent.konten}}</article>
+  <h3>Penulis : {{blogcontent.penulis}}</h3>
+  <ul>
+    <li v-for="kategori in blogcontent.kategoris">
+      <p>{{kategori}}</p>
+    </li>
+  </ul>
 </div>

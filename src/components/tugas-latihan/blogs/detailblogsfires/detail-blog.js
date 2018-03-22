@@ -1,16 +1,16 @@
 import axios from 'axios';
+import { URLFIREBASE } from '@/components/konstans/Konstans';
 
 export default {
   name: 'DetailBlogsFires',
   data() {
     return {
       idblog: this.$route.params.blog_id,
-      pesantambahan: this.$route.params.pesantambahan,
       blogcontent: {},
     };
   },
   mounted() {
-    const urls = `https://jsonplaceholder.typicode.com/posts/${this.idblog}`;
+    const urls = `${URLFIREBASE}/rest/post/${this.idblog}.json`;
     axios.get(urls)
       .then((resp) => {
         console.log(resp.data);
@@ -19,10 +19,6 @@ export default {
       .catch((err) => {
         console.log(err);
       });
-
-    // cek ambil pesan tambahan
-    console.log('pesan tambahan dari blog');
-    console.log(this.pesantambahan);
   },
   methods: {
 
