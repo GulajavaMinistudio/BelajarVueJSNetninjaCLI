@@ -45,12 +45,14 @@ module.exports = {
 
   build: {
     // Template for index.html
+    // assets public path untuk github pages perlu disesuaikan dengan nama projectnya
+    // https://gulajavaministudio.github.io/demo-latihan-vues
     index: path.resolve(__dirname, '../dist/index.html'),
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/demo-latihan-vues/',
 
     /**
      * Source Maps
